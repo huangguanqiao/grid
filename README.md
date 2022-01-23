@@ -10,3 +10,6 @@ It accepts these positional values:
 - space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element
 - space-between — includes an equal amount of space between grid items and no space at either end
 - space-evenly — places an even amount of space between grid items and at either end
+
+Additional resources:
+[align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content#values)
