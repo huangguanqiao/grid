@@ -53,6 +53,30 @@ It accepts these positional values:
 - space-between — includes an equal amount of space between grid items and no space at either end
 - space-evenly — places an even amount of space between grid items and at either end
 
+## Justify Self and Align Self
+justify-self specifies how an individual element should position itself with respect to the row axis. This property will override justify-items for any item on which it is declared.
+
+align-self specifies how an individual element should position itself with respect to the column axis. This property will override align-items for any item on which it is declared.
+
+1. justify-self属性设置单元格内容的水平位置（左中右），跟justify-items属性的用法完全一致，但只作用于单个项目。
+2. align-self属性设置单元格内容的垂直位置（上中下）， 跟align-items属性的用法完全一致，也是只作用于单个项目。
+3. place-self属性是align-self属性和justify-self属性的合并简写形式。
+
+```CSS
+justify-self: start | end | center | stretch;
+align-self: start | end | center | stretch;
+place-self: <align-self> <justify-self>;
+
+//start：对齐单元格的起始边缘。
+//end：对齐单元格的结束边缘。
+//center：单元格内部居中。
+//stretch：拉伸，占满单元格的整个宽度（默认值）。
+```
+- start — positions grid items on the left side/top of the grid area
+- end — positions grid items on the right side/bottom of the grid area
+- center — positions grid items on the center of the grid area
+- stretch — positions grid items to fill the grid area (default)
+
 Additional resources:
 [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 [justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values)
