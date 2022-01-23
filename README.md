@@ -77,6 +77,49 @@ place-self: <align-self> <justify-self>;
 - center — positions grid items on the center of the grid area
 - stretch — positions grid items to fill the grid area (default)
 
+## Grid Auto Rows and Grid Auto Columns
+grid-auto-rows specifies the height of implicitly added grid rows. grid-auto-columns specifies the width of implicitly added grid columns.
+用来设置，浏览器自动创建的多余网格的列宽和行高。
+
+grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns:
+
+- pixels (px)
+- percentages (%)
+- fractions (fr)
+- the repeat() function
+
+## Grid Auto Flow
+grid-auto-flow specifies whether new elements should be added to rows or columns, and is declared on grid containers.
+
+grid-auto-flow accepts these values:
+划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行，即下图数字的顺序。
+
+```CSS
+// 这个顺序由grid-auto-flow属性决定，默认值是row，即"先行后列"。也可以将它设成column，变成"先列后行"。
+grid-auto-flow: column;
+
+```
+
+- row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)
+- column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements
+- dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added
+You can pair row or column with dense, like this: grid-auto-flow: row dense;.
+
+## Review
+Great work! You have learned many new properties to use when creating a layout using CSS Grid! Let’s review:
+
+- grid-template-areas specifies grid named grid areas
+- grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.
+- justify-items specifies how individual elements should spread across the row axis
+- justify-content specifies how groups of elements should spread across the row axis
+- justify-self specifies how a single element should position itself with respect to the row axis
+- align-items specifies how individual elements should spread across the column axis
+- align-content specifies how groups of elements should spread across the column axis
+- align-self specifies how a single element should position itself with respect to the column axis
+- grid-auto-rows specifies the height of rows added implicitly to the grid
+- grid-auto-columns specifies the width of columns added implicitly to the grid
+- grid-auto-flow specifies in which direction implicit elements should be created
+
 Additional resources:
 [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 [justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values)
